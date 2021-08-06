@@ -50,3 +50,6 @@
 6. [`models.py`](models.py) The structure of models are also contained in this file. (The method `conv_model()` is also contained, this model can further be trained with more dataset in different fonts).
 7. [`data.py`](data.py) Contains the datasets utilities (i.e, Tensorflow custom dataset,...)
 8. The file [`utils.py`](utils.py) contains utilities.
+
+# Slide:
+[https://docs.google.com/presentation/d/1X--VHg9UoqE9hO9lRXUCnqtrCJb8wULnPZcpaQubbPs/edit?usp=sharing](https://docs.google.com/presentation/d/1X--VHg9UoqE9hO9lRXUCnqtrCJb8wULnPZcpaQubbPs/edit?usp=sharing)
