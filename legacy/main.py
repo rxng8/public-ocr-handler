@@ -45,7 +45,7 @@ model = load_model("./models/ocrModel")
 
 # %%
 
-IMAGE_NAME = "credit_card_01.png"
+IMAGE_NAME = "credit_card_03.png"
 IMAGE_PATH = os.path.join(EXAMPLE_DS, IMAGE_NAME)
 
 # initialize a rectangular (wider than it is tall) and square
@@ -202,7 +202,7 @@ for (i, (gX, gY, gW, gH)) in enumerate(locs):
 # print("Credit Card Type: {}".format(FIRST_NUMBER[output[0]]))
 print("Credit Card #: {}".format("".join(output)))
 # cv2.imshow("Image", image)
-# show_img(image)
+show_img(image)
 
 
 

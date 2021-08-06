@@ -1,6 +1,7 @@
 # %%
 
 # import the necessary packages
+from re import S
 from imutils import contours
 import numpy as np
 import imutils
@@ -70,7 +71,8 @@ show_img(thresh5)
 # heirarchy is the list of relationship among contours
 
 #get threshold image
-ret,thresh_img = cv2.threshold(img_gray, 100, 255, cv2.THRESH_BINARY)
+ret, thresh_img = cv2.threshold(img_gray, 100, 255, cv2.THRESH_BINARY)
+
 #find contours
 _contours, hierarchy = cv2.findContours(thresh_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -88,7 +90,7 @@ show_img(img_contours)
 
 # But most of the time, below method will be useful
 img_contours = np.zeros(img.shape)
-cnt = _contours[4]
+cnt = _contours[3]
 cv2.drawContours(img_contours, [cnt], 0, (0,255,0), 3)
 show_img(img_contours)
 

@@ -4,6 +4,7 @@
 # %%
 
 # import the necessary packages
+from matplotlib.pyplot import show
 from utils import show_img
 from imutils import contours
 import numpy as np
@@ -44,6 +45,8 @@ ref = cv2.imread(args["reference"])
 ref = cv2.cvtColor(ref, cv2.COLOR_BGR2GRAY)
 ref = cv2.threshold(ref, 10, 255, cv2.THRESH_BINARY_INV)[1]
 
+# %%
+
 # find contours in the OCR-A image (i.e,. the outlines of the digits)
 # sort them from left to right, and initialize a dictionary to map
 # digit name to the ROI
@@ -61,7 +64,7 @@ for (i, c) in enumerate(refCnts):
 	(x, y, w, h) = cv2.boundingRect(c)
 	roi = ref[y:y + h, x:x + w]
 	roi = cv2.resize(roi, (57, 88))
-	# show_img(roi)
+	show_img(roi)
 
 	# update the digits dictionary, mapping the digit name to the ROI
 	digits[i] = roi
@@ -82,6 +85,10 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # regions against a dark background (i.e., the credit card numbers)
 tophat = cv2.morphologyEx(gray, cv2.MORPH_TOPHAT, rectKernel)
 
+show_img(tophat)
+
+# %%
+
 # compute the Scharr gradient of the tophat image, then scale
 # the rest back into the range [0, 255]
 gradX = cv2.Sobel(tophat, ddepth=cv2.CV_32F, dx=1, dy=0,
@@ -91,16 +98,28 @@ gradX = np.absolute(gradX)
 gradX = (255 * ((gradX - minVal) / (maxVal - minVal)))
 gradX = gradX.astype("uint8")
 
+show_img(gradX)
+
+# %%
 # apply a closing operation using the rectangular kernel to help
 # cloes gaps in between credit card number digits, then apply
 # Otsu's thresholding method to binarize the image
 gradX = cv2.morphologyEx(gradX, cv2.MORPH_CLOSE, rectKernel)
+
+show_img(gradX)
+
+# %%
+
 thresh = cv2.threshold(gradX, 0, 255,
 	cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
 
 # apply a second closing operation to the binary image, again
 # to help close gaps between credit card number regions
 thresh = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, sqKernel)
+
+show_img(thresh)
+
+# %%
 
 # find contours in the thresholded image, then initialize the
 # list of digit locations
