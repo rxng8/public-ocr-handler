@@ -50,3 +50,26 @@
    * 'Brute force matcher'
    * 'PLSL (Parallel Light Speed Labeling)'
    * 'LMSER (Linear Time Maximally Stable Extremal Regions)'
+
+## Tensorflow Object detection API and Export TFLITE and TFJS.
+## And also infer and test!
+
+1. Navigate to [`Tensorflow\workspace\training_demo\README.md`](Tensorflow\workspace\training_demo\README.md)
+  NOTE: Only ssd or center_net models are supported in tflite model conversion for tf object_detection library. (tf version: 2.5.0) (tf object detection version: 0.1)
+2. Navigate to [`tflite\README.md`](tflite\README.md)
+
+3. Stats:
+  * Tensorflow models:
+    * centernet_mobilenet (train success, have not inferred)
+    * centernet_resnet101 (successfully inferred)
+    * efficientdet_d7 (train failed)
+    * my_ssd_resnet50_v1_fpn (successfully inferred)
+    * ssd_mobilenet (failure inference)
+    * ssd_mobilenet_v2_fpnlite (training)
+
+4. Infer on mobile: follow this docs: [https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tf2.md](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tf2.md)
+
+5. IMPORTANT: Tflite convert only support ssd now, according to [https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tf2.md](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tf2.md)
+
+# Other ways on EfficientDet:
+[https://www.tensorflow.org/lite/tutorials/model_maker_object_detection](https://www.tensorflow.org/lite/tutorials/model_maker_object_detection)

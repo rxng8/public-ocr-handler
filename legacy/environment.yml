@@ -1,4 +1,4 @@
-name: ocr-legacy
+name: ocr-legacy-demo
 channels:
   - defaults
 dependencies:
@@ -85,4 +85,4 @@ dependencies:
     - typing-extensions==3.7.4.3
     - urllib3==1.26.4
     - werkzeug==1.0.1
-prefix: C:\Users\nguyv\.conda\envs\ocr-legacy
+prefix: C:\Users\nguyv\.conda\envs\ocr-legacy-demo
