@@ -207,3 +207,4 @@ for (i, (gX, gY, gW, gH)) in enumerate(locs):
 print("Credit Card Type: {}".format(FIRST_NUMBER[output[0]]))
 print("Credit Card #: {}".format("".join(output)))
 show_img(image)
+
