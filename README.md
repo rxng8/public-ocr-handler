@@ -1,5 +1,12 @@
 # Public repository for optimizing OCR credit card reading problem with traditional methods and deep neural network methods.
 
+## Demo
+<center>
+<img src="doc/demo1.gif" width="150">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="doc/demo2.gif" width="150">
+</center>
+
 ## Algorithm List:
 1. Legacy <`To be edited>`
 2. CRNN <`To be edited>`
