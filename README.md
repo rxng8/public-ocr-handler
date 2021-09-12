@@ -2,7 +2,9 @@
 
 ## Demo
 <center>
+<p>
 <img src="doc/demo1.gif" width="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="doc/demo2.gif" width="150">
+</p>
 </center>
 
 ## Algorithm List:
