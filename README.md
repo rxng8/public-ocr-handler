@@ -1,5 +1,5 @@
 # Public repository for optimizing OCR credit card reading problem with traditional methods and deep neural network methods.
-
+# Author: Alex Nguyen (Viet Dung Nguyen)
 ## Demo
 <center>
 <p>
