@@ -12,7 +12,8 @@
 2. CRNN <`To be edited>`
 3. SSD <`To be edited>`
 4. Efficientdet <`To be edited>`
-5. Other: Faster-RCNN <`To be edited>`
+5. Faster-RCNN: The algorithm was developed from scratch [here](https://github.com/rxng8/Faster-R-CNN-Research)
+6. YOLO: The algorithm was developed from scratch [here](https://github.com/rxng8/YOLO-Object-Detection-Algorithm)
 
 ## Prerequisite:
 * Anaconda and related environment knowledge.
